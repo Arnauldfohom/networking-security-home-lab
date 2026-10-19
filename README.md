@@ -80,7 +80,24 @@ Next steps
 
 Supporting evidence
 
+** Progress Tracker**
 
+| Day | Focus | Status |
+|---|---|---|
+| Day 01 | Mac-to-Windows 11 VM connectivity testing and firewall troubleshooting | Completed |
+| Day 02 | To be documented | Planned |
+| Day 03 | To be documented | Planned |
+| Day 04 | To be documented | Planned |
+| Day 05 | To be documented | Planned |
+| Day 06 | To be documented | Planned |
+| Day 07 | To be documented | Planned |
+| Day 08 | To be documented | Planned |
+| Day 09 | To be documented | Planned |
+| Day 10 | Mini security audit and final report | Planned |
+
+**Day 01 report:** [Mac-to-Windows 11 VM Connectivity Testing](docs/day-01/README.md)
+
+**Evidence:** [Day 01 Screenshots](screenshots/day-01/)
 
 
 **Tools and Technologies**
