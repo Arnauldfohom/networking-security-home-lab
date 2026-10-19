@@ -122,3 +122,65 @@ The exercise provided practical experience with ICMP-based connectivity testing,
 **Lab status:** Completed  
 **Primary skill demonstrated:** Network connectivity troubleshooting  
 **Next step:** Continue with the next networking exercise and document the observed results using the same reporting structure.
+
+
+
+**Diagnosing Asymmetric ICMP Connectivity
+**
+Objective: Investigate why the MacBook Pro could not ping the Dell Latitude E7470, even though the Dell could ping the Mac.
+
+Environment:
+
+MacBook Pro: 192.168.1.212
+
+Dell Latitude E7470: 192.168.1.181
+
+Subnet mask: 255.255.255.0
+
+Initial observation: The Mac's ping requests to the Dell timed out. The Dell could successfully ping the Mac, and the Mac had an ARP entry for the Dell.
+
+Hypothesis: The Dell's inbound firewall rules were blocking ICMPv4 Echo Requests.
+
+Test and remediation: A targeted Windows Firewall rule was created on the Dell to allow inbound ICMPv4 Echo Requests from 192.168.1.212.
+
+Result: The ping from the Mac to the Dell succeeded after the rule was added.
+
+Conclusion: The result strongly supports the hypothesis that inbound ICMP filtering on the Dell caused the initial failure. The test did not establish whether other network services were accessible.
+
+Security note: The firewall rule was restricted to the Mac's IP address. Its continued necessity should be reviewed after testing.Diagnosing Asymmetric ICMP Connectivity
+
+Objective: Investigate why the MacBook Pro could not ping the Dell Latitude E7470, even though the Dell could ping the Mac.
+
+Environment:
+
+MacBook Pro: 192.168.1.212
+
+Dell Latitude E7470: 192.168.1.181
+
+Subnet mask: 255.255.255.0
+
+Initial observation: The Mac's ping requests to the Dell timed out. The Dell could successfully ping the Mac, and the Mac had an ARP entry for the Dell.
+
+Hypothesis: The Dell's inbound firewall rules were blocking ICMPv4 Echo Requests.
+
+Test and remediation: A targeted Windows Firewall rule was created on the Dell to allow inbound ICMPv4 Echo Requests from 192.168.1.212.
+
+Result: The ping from the Mac to the Dell succeeded after the rule was added.
+
+Conclusion: The result strongly supports the hypothesis that inbound ICMP filtering on the Dell caused the initial failure. The test did not establish whether other network services were accessible.
+
+Security note: The firewall rule was restricted to the Mac's IP address. Its continued necessity should be reviewed after testing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
